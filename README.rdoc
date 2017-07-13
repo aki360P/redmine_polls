@@ -12,6 +12,8 @@ Polls not voted by the current user are shown on Home (all projects) and on proj
 
 Deleting a poll option already voted for by some users deletes their votes. 
 
+Make it work for 3.3.x
+
 Credits:
 Author: Pavel Vinokurov (vinokurov@axmor.com)
 Inspired by Confluence Survey plugin (https://plugins.atlassian.com/plugin/details/195)
