@@ -1,4 +1,4 @@
-class CreatePolls < ActiveRecord::Migration
+class CreatePolls < ActiveRecord::Migration[4.2]
   def self.up
 
     create_table :voting_polls do |t|

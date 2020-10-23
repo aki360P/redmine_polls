@@ -1,6 +1,6 @@
 class VotingPoll < ActiveRecord::Base
   belongs_to :project
-  has_many :choices, :class_name => 'VotingChoice', :foreign_key => 'poll_id', :dependent => :delete_all, :order => "#{VotingChoice.table_name}.created_on"
+  has_many :choices, -> { order "#{VotingChoice.table_name}.created_on" }, :class_name => 'VotingChoice', :foreign_key => 'poll_id', :dependent => :delete_all
 
 
   validates_presence_of :question

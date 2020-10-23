@@ -1,6 +1,6 @@
 <% if User.current.allowed_to?(:vote_polls, Project.find_by_id(poll.project_id))%>
 <% form = form_tag({:controller => 'polls', :action => 'vote',:project_id => poll.project_id,
-                                     :back_url => url_for(params)}) do %>
+                                     :back_url => url_for(params.permit!)}) do %>
 <table class="list">
     <tr>
         <th><%= poll.question %> </th>
